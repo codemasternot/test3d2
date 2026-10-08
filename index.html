@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Statue of Laocoön</title>
-<meta name="description" content="Laocoön — Bronze and Time. An immersive journey through molten bronze, eternal sculpture and digital form.">
+<title>Alchemist 3D | Ideas Made Real — 3D Printing Studio</title>
+<meta name="description" content="Alchemist 3D transforms ideas into physical objects. Explore custom 3D printing, functional prototyping, creative fabrication and a cinematic studio portfolio.">
 <meta name="theme-color" content="#000000">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@1,500&display=swap');
@@ -274,12 +274,106 @@ body {
   .slide-title .char, .slide-desc { transition-duration: 0.01ms; }
 }
 
+
+
+/* Alchemist 3D — cinematic product atelier */
+:root{--bronze:#b78258;--soft:#f3e7da;--panel:#101111}
+html{scroll-behavior:auto}
+.brand{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;white-space:nowrap;letter-spacing:3.2px;font-size:12px}
+.brand-asterisk{color:#dcac7d;font-size:29px;line-height:1;transform:rotate(10deg);font-weight:300}
+.brand-sup{margin-left:5px;font-size:10px;color:#dab997;vertical-align:super;letter-spacing:1px}
+.nav-link:hover,.nav-link:focus-visible{color:#e1b18a}
+.contact-btn{border:1px solid rgba(255,255,255,.85);font-family:'Outfit',sans-serif;cursor:pointer}
+.main-header{position:relative;z-index:30}
+.eyebrow{color:#f1ccae;font-size:10px;letter-spacing:2.8px;text-transform:uppercase;margin-bottom:18px;font-weight:600;display:flex;align-items:center;gap:18px;white-space:nowrap;opacity:0;transform:translateY(12px);transition:opacity .7s,transform .7s}
+.slide.active .eyebrow{opacity:1;transform:translateY(0)}
+.eyebrow-line{height:1px;width:36px;background:#d6a27966;display:inline-block}
+.slide-title{font-size:clamp(68px,8.5vw,116px);letter-spacing:-2.1px;line-height:.94;color:#fff7ed;text-wrap:balance}
+#slide-1 .slide-title{margin-left:60px}
+#slide-1 .eyebrow{margin-left:60px}
+#slide-1 .desc-row{max-width:720px}
+.slide-desc{color:#e0dcd8;font-size:15px;line-height:1.68}
+.slide-action{appearance:none;display:inline-flex;align-items:center;gap:32px;margin-top:24px;padding:13px 16px 13px 0;background:transparent;color:#f4ebe0;border:0;border-bottom:1px solid #bea084;text-transform:uppercase;font:600 10px 'Outfit',sans-serif;letter-spacing:2px;pointer-events:auto;position:relative;z-index:18;cursor:pointer!important;opacity:0;transform:translateY(15px);transition:transform .4s,opacity .5s}
+#slide-1 .slide-action{margin-left:60px}
+.slide-action span{font-size:18px;color:#f1c59b;transition:transform .25s}
+.slide-action:hover span{transform:translate(3px,-3px)}
+.slide.active .slide-action{opacity:1;transform:translateY(0)}
+.slide.active{z-index:15}
+.slide:not(.active){visibility:hidden}
+.slide.active{visibility:visible}
+.service-list,.material-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px;opacity:0;transform:translateY(14px);transition:opacity .9s .35s,transform .9s .35s}
+.slide.active .slide-extra{opacity:1;transform:translateY(0)}
+.service-list span{font:500 10px 'Outfit',sans-serif;color:#d8c3b1;letter-spacing:1px;padding:9px 12px;border:1px solid #ffffff2b;background:#ffffff09}
+.material-list span{font:600 10px 'Outfit',sans-serif;letter-spacing:1.3px;color:#f1d9bd;border:1px solid #c9a57a66;background:#b7825812;padding:10px 12px}
+#slide-2 .slide-extra{margin-left:calc(50vw + 20px);width:min(365px,34vw)}
+#slide-3 .slide-title{white-space:normal}
+#slide-3 .slide-extra{min-width:260px}
+#slide-4 .slide-action{margin-top:22px}
+#slide-2-img{background:linear-gradient(165deg,#341f18,#0a1018);border:1px solid #a078583c}
+.print-specimen{position:relative;width:100%;height:100%;overflow:hidden;background:radial-gradient(ellipse at 45% 42%,#583a27 0%,#101116 57%,#020304 100%)}
+.specimen-grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff13 1px,transparent 1px),linear-gradient(90deg,#ffffff13 1px,transparent 1px);background-size:23px 23px;transform:perspective(400px) rotateX(28deg) scale(1.4);opacity:.6}
+.specimen-orbit{position:absolute;width:52%;height:52%;left:24%;top:23%;border:13px solid #b68c70;border-left-color:#684837;border-bottom-color:#4a2e21;border-radius:36% 64% 32% 68%;box-shadow:inset 15px 18px 24px #ffce993e,14px 16px 28px #000b;transform:rotate(-23deg)}
+.specimen-orbit.inner{transform:rotate(48deg) scale(.72);border-color:#d8b48a;border-top-color:#6b4832;mix-blend-mode:screen}
+.specimen-core{position:absolute;top:45%;width:100%;text-align:center;font:600 26px 'Outfit',sans-serif;letter-spacing:2px;color:#fff2d7;text-shadow:0 2px 20px #000}
+.specimen-core span{color:#e6af7b;font-size:15px;vertical-align:super}
+.specimen-caption{position:absolute;bottom:14px;left:14px;right:14px;display:flex;flex-direction:column;gap:3px;font:500 9px 'Outfit',sans-serif;letter-spacing:1.5px}
+.specimen-caption small{font-size:7px;color:#ffffff9f;letter-spacing:1px}
+.site-status{position:fixed;right:70px;bottom:44px;z-index:12;display:flex;gap:12px;align-items:center;color:#f2e5d6b0;letter-spacing:2px;font:500 9px 'Outfit',sans-serif;pointer-events:none}
+.status-dot{width:6px;height:6px;border-radius:50%;background:#e8ae78;box-shadow:0 0 8px #e9a670}
+.bottom-credit{position:fixed;left:60px;bottom:25px;z-index:11;display:flex;gap:13px;font:500 9px 'Outfit',sans-serif;color:#dec3aa9e;letter-spacing:1.3px;pointer-events:none}
+#slide-1{bottom:16%}
+#slide-2,#slide-3,#slide-4{bottom:16%}
+.quote-scrim[hidden]{display:none!important}
+.quote-scrim{position:fixed;inset:0;background:#020304bd;backdrop-filter:blur(9px);z-index:90;opacity:0;transition:opacity .4s}
+.quote-scrim.open{opacity:1}
+.quote-panel{position:fixed;top:0;right:0;bottom:0;z-index:91;width:min(550px,100vw);padding:32px 42px 45px;background:#141311;box-shadow:-40px 0 100px #0009;border-left:1px solid #bb966b3c;color:#f4ebe1;transform:translateX(105%);transition:transform .55s cubic-bezier(.18,.86,.26,1);overflow-y:auto;overscroll-behavior:contain;visibility:hidden}
+.quote-panel.open{transform:translateX(0);visibility:visible}
+.quote-topline{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid #ffffff25;padding-bottom:18px}
+.quote-label,.quote-count{font:600 10px 'Outfit',sans-serif;letter-spacing:2px;color:#d6ad88}
+.quote-close{border:1px solid #ffffff4a;color:white;background:transparent;width:36px;height:36px;border-radius:50%;font:300 26px 'Outfit',sans-serif;cursor:pointer!important;line-height:1}
+.quote-close:hover{background:#ffffff18}
+.quote-intro{padding:27px 0 24px}
+.quote-count{font-size:9px}
+.quote-intro h2{font:400 clamp(55px,7vw,83px) 'Italiana',serif;line-height:.9;margin:16px 0 21px}
+.quote-intro h2 em{color:#dfad7d;font-family:'Playfair Display',serif;font-size:.85em}
+.quote-intro p{font:300 13px/1.6 'Outfit',sans-serif;color:#d2c7bc;max-width:430px}
+.quote-form{display:grid;gap:15px}
+.quote-form label{display:flex;flex-direction:column;gap:7px;font:600 9px/1.4 'Outfit',sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#ddcabb;min-width:0}
+.form-pair{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.quote-form input:not([type=range]):not([type=file]),.quote-form select,.quote-form textarea{border:1px solid #ffffff2f;background:#ffffff0a;border-radius:0;color:#f5eae0;padding:12px 11px;font:400 12px 'Outfit',sans-serif;outline:none;width:100%;min-width:0;letter-spacing:0;text-transform:none;transition:border-color .2s}
+.quote-form select option{background:#161411;color:#fff}
+.quote-form textarea{resize:vertical;min-height:75px}
+.quote-form input:focus-visible,.quote-form select:focus-visible,.quote-form textarea:focus-visible{border-color:#dda87a!important}
+.quote-form input[type=range]{accent-color:#dca676;cursor:pointer!important;width:100%;margin-top:8px}
+.range-output{display:flex;justify-content:space-between;color:#bba38f;font-size:9px;letter-spacing:0}
+.range-output output{color:#fff;font-weight:600}
+.field-note{font-size:8px;opacity:.65}
+.upload-box{border:1px dashed #b88a6359;padding:15px;position:relative;cursor:pointer!important}
+.upload-box input[type=file]{display:block;width:100%;font-size:10px;color:#d9c5b4;letter-spacing:0;text-transform:none;max-width:100%}
+.upload-box span{font-size:9px;color:#c5b09c;text-transform:none;letter-spacing:0;font-weight:300}
+.upload-box strong{font:400 11px 'Outfit',sans-serif;letter-spacing:0;text-transform:none}
+.estimate-block{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-top:1px solid #ffffff30;border-bottom:1px solid #ffffff30;margin-top:7px;gap:10px}
+.estimate-block div{display:flex;flex-direction:column;gap:6px}
+.estimate-block div span{font-size:9px;letter-spacing:1.5px;color:#f0c599;font-weight:600}
+.estimate-block div small{font-size:10px;color:#bba89b}
+.estimate-block strong{font:400 38px 'Italiana',serif;white-space:nowrap}
+.quote-buttons{display:grid;grid-template-columns:1fr auto;gap:10px}
+.quote-buttons button{border:1px solid #d2b18e;cursor:pointer!important;padding:15px 16px;font:600 10px 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:1px}
+.quote-download{display:flex;justify-content:space-between;background:#efd5b4;color:#1f1a16;gap:10px}
+.quote-copy{background:transparent;color:#f1dcc4}
+.quote-buttons button:hover{filter:brightness(1.15)}
+.quote-disclosure{font:300 10px/1.6 'Outfit',sans-serif;color:#baaa9b}
+.quote-feedback{font:500 11px/1.5 'Outfit',sans-serif;color:#f0d1ae;min-height:1.5em}
+body.quote-open{overflow:hidden}
+@media(max-width:900px){#slide-1 .eyebrow,#slide-1 .slide-action{margin-left:12px}.bottom-credit{left:25px;bottom:13px;flex-direction:column;gap:3px}.site-status{right:28px;bottom:25px}#slide-2 .slide-extra{margin-left:50vw;width:41vw}}
+@media(max-width:600px){.header-nav{gap:10px}.brand{font-size:10px;letter-spacing:1px}.brand-asterisk{font-size:22px}.contact-btn{padding:9px 12px;white-space:nowrap}.cinematic-container{padding-bottom:45px}#slide-1,#slide-2,#slide-3,#slide-4{bottom:21%}#slide-1 .eyebrow,#slide-1 .slide-action{margin-left:0}.eyebrow{font-size:8px;letter-spacing:1px;margin-bottom:11px}.slide-title{font-size:clamp(52px,15vw,80px)}.slide-desc{font-size:12px}.slide-action{margin-top:14px;font-size:9px;padding:8px 0}.service-list{gap:4px}.service-list span{font-size:8px;padding:6px 8px}.material-list span{font-size:8px;padding:7px 8px}#slide-2 .slide-extra{margin-left:0;width:73vw}#slide-2-img{top:142px;width:40vw}.bottom-credit{left:25px;bottom:13px;font-size:7px;letter-spacing:.2px}.site-status{right:19px;bottom:16px;font-size:7px;letter-spacing:.4px}.quote-panel{padding:21px 21px 30px}.form-pair{gap:10px}.quote-intro h2{font-size:63px}.quote-form{gap:12px}.estimate-block strong{font-size:30px}}
+@media (hover:none) and (pointer:coarse){.cursor-inner,.cursor-outer{display:none}body,*{cursor:auto!important}}
+
 </style>
 <script type="importmap">
 {
   "imports": {
-    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-    "three/examples/jsm/loaders/GLTFLoader.js": "https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js"
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
   }
 }
 </script>
@@ -289,43 +383,56 @@ body {
 <div class="cursor-outer"></div>
 <div class="cinematic-container">
 <div class="main-header">
-  <div class="brand">Laocoön</div>
-  <nav class="header-nav">
-    <a href="#slide-1" class="nav-link">Bronze</a>
+  <a class="brand" href="#" id="brand-top" aria-label="Alchemist 3D — back to top"><span class="brand-asterisk">✳</span><span>ALCHEMIST<span class="brand-sup">3D</span></span></a>
+  <nav class="header-nav" aria-label="Site navigation">
+    <a href="#slide-1" class="nav-link">Studio</a>
     <span class="nav-dot"></span>
-    <a href="#slide-2" class="nav-link">Marble</a>
+    <a href="#slide-2" class="nav-link">Capabilities</a>
     <span class="nav-dot"></span>
-    <a href="#slide-3" class="nav-link">Fluid</a>
+    <a href="#slide-3" class="nav-link">Materials</a>
     <span class="nav-dot"></span>
-    <a href="#slide-4" class="nav-link">Digital</a>
+    <a href="#slide-4" class="nav-link">Projects</a>
   </nav>
   <div class="header-actions">
-    <a href="#" class="contact-btn">Contact <span class="btn-circle"></span></a>
+    <button type="button" class="contact-btn" data-open-quote>Start a project <span class="btn-circle"></span></button>
   </div>
 </div>
 <div class="slide" id="slide-1">
-  <h2 class="slide-title">Bronze <br>and Time</h2>
+  <div class="eyebrow">Independent fabrication studio <span class="eyebrow-line"></span> South Africa</div>
+  <h2 class="slide-title">Ideas made<br>real.</h2>
   <div class="desc-row">
-    <p class="slide-desc col-1">A timeless material holding centuries of human history. Fluid in hot flames, eternal in its form. Each curve captures a tense, dramatic moment.</p>
-    <p class="slide-desc col-2">Born of molten fire and creative will, it stands to bridge our ancient memory and modern vision. A fluid energy frozen in still, heavy bronze.</p>
+    <p class="slide-desc col-1">From the first sketch to the final layer. We turn ambitious concepts into beautifully considered physical objects.</p>
+    <p class="slide-desc col-2">One-off prototypes. Functional components. Intricate sculptural forms. Precision and imagination, built together.</p>
   </div>
+  <button type="button" class="slide-action" data-open-quote>Start your print <span aria-hidden="true">↗</span></button>
 </div>
-
 <div class="slide" id="slide-2">
-  <h2 class="slide-title">Marble <br>Emotion</h2>
-  <p class="slide-desc">A sculpture frozen at the peak of human suffering and heroic struggle. Laocoön and his sons, bound by ruthless fate.</p>
+  <div class="eyebrow">01 / Our capabilities</div>
+  <h2 class="slide-title">Form follows<br>function.</h2>
+  <p class="slide-desc">Rapid prototyping, custom FDM prints, resin detail work and design-for-manufacturing support. Built for iteration, finished for the real world.</p>
+  <div class="service-list slide-extra"><span>01 &nbsp; Rapid prototyping</span><span>02 &nbsp; Functional parts</span><span>03 &nbsp; Product models</span><span>04 &nbsp; Design assistance</span></div>
 </div>
 <div class="slide" id="slide-3">
-  <h2 class="slide-title">Liquid Metal</h2>
-  <p class="slide-desc">Art that breathes. Mesmerizing waves of liquid bronze flow through space, reflecting every contour and tensed muscle of the ancient masterpiece.</p>
+  <div class="eyebrow">02 / Material library</div>
+  <h2 class="slide-title">Beyond<br>the surface.</h2>
+  <p class="slide-desc">Choose the balance of strength, flexibility and detail. From practical polymers to smooth resin, every project starts with the right process.</p>
+  <div class="material-list slide-extra"><span>PLA</span><span>PETG</span><span>ABS / ASA</span><span>TPU</span><span>RESIN</span></div>
 </div>
 <div class="slide" id="slide-4">
-  <h2 class="slide-title">Eternal <br>Moment</h2>
-  <p class="slide-desc">Contemplating antique form through the lens of new dimensions. A classic masterpiece reborn in the currents of radiant digital matter.</p>
+  <div class="eyebrow">03 / Your next project</div>
+  <h2 class="slide-title">Make it<br>matter.</h2>
+  <p class="slide-desc">A single object or a small production run. Bring a CAD file, a reference, or just the beginning of an idea. We will help you shape the next step.</p>
+  <button type="button" class="slide-action final-action" data-open-quote>Build your project brief <span aria-hidden="true">↗</span></button>
 </div>
 </div>
 <div class="slide-image-mask" id="slide-2-img">
-  <img src="https://api.getlayers.ai/storage/v1/object/public/public/assets/laocoon-59f84455c6/1.png" alt="Editorial Concept">
+  <div class="print-specimen" aria-hidden="true">
+   <div class="specimen-grid"></div>
+   <span class="specimen-orbit"></span>
+   <span class="specimen-orbit inner"></span>
+   <span class="specimen-core">A<span>3</span>D</span>
+   <div class="specimen-caption"><strong>STUDY N° 001</strong><small>GENERATIVE FORM / LAYERED FABRICATION</small></div>
+</div>
 </div>
 <div class="grid-horizontal-line"></div>
 <div class="grid-lines">
@@ -345,9 +452,72 @@ body {
   </div>
 </div>
 <canvas id="webgl"></canvas>
+
+<div class="site-status" aria-hidden="true"><span class="status-dot"></span> MATERIALISING IDEAS / 001</div>
+<div class="bottom-credit" aria-hidden="true"><span>ALCHEMIST 3D</span><span>— A DIVISION OF THE DATA ALCHEMIST</span></div>
+<div class="quote-scrim" id="quote-scrim" hidden></div>
+<aside class="quote-panel" id="quote-panel" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="quote-title" inert>
+  <div class="quote-topline">
+    <span class="quote-label">ALCHEMIST 3D / PROJECT STUDIO</span>
+    <button type="button" class="quote-close" id="quote-close" aria-label="Close project brief">×</button>
+  </div>
+  <div class="quote-intro">
+    <div class="quote-count">001 — YOUR PROJECT</div>
+    <h2 id="quote-title">Let's make<br>it <em>real.</em></h2>
+    <p>Configure a starting point for your print and prepare a project brief. Estimates are illustrative; specifications are reviewed before any order.</p>
+  </div>
+  <form id="quote-form" class="quote-form">
+    <div class="form-pair">
+      <label>Your name<input type="text" name="clientName" placeholder="Your name" maxlength="120" autocomplete="name" required></label>
+      <label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
+    </div>
+    <div class="form-pair">
+      <label>Project type<select name="service" id="quote-service">
+        <option value="prototyping">Prototype / one-off</option>
+        <option value="functional">Functional part</option>
+        <option value="model">Display / architectural model</option>
+        <option value="design">CAD and design assistance</option>
+      </select></label>
+      <label>Material<select name="material" id="quote-material">
+        <option value="pla">PLA — everyday detail</option>
+        <option value="petg">PETG — durable</option>
+        <option value="abs">ABS / ASA — engineering</option>
+        <option value="tpu">TPU — flexible</option>
+        <option value="resin">Resin — fine detail</option>
+      </select></label>
+    </div>
+    <div class="form-pair">
+      <label>Estimated material weight <span class="field-note">grams</span>
+        <input type="range" name="grams" id="quote-grams" min="10" max="500" step="10" value="80">
+        <span class="range-output"><span>10 g</span><output id="grams-output">80 g</output><span>500 g</span></span>
+      </label>
+      <label>Quantity<input type="number" name="quantity" id="quote-qty" min="1" max="100" step="1" value="1" required></label>
+    </div>
+    <label>Finish<select name="finish" id="quote-finish">
+      <option value="standard">Standard finish</option>
+      <option value="fine">Fine detail / sanding</option>
+      <option value="premium">Paint-ready finishing</option>
+    </select></label>
+    <label>Tell us about the idea<textarea name="notes" rows="3" maxlength="1500" placeholder="Dimensions, application, timeline, tolerances…"></textarea></label>
+    <label class="upload-box">OPTIONAL REFERENCE FILE <span>STL, OBJ, 3MF, STEP, STP, ZIP — selected locally, not uploaded</span>
+      <input type="file" id="quote-file" name="reference" accept=".stl,.obj,.3mf,.step,.stp,.zip" />
+      <strong id="file-label">+ Choose a model or drawing</strong>
+    </label>
+    <div class="estimate-block">
+      <div><span>ILLUSTRATIVE PROJECT ESTIMATE</span><small>Not a binding quote · excludes delivery</small></div>
+      <strong id="quote-estimate">R 0</strong>
+    </div>
+    <div class="quote-buttons">
+      <button type="submit" class="quote-download">Download project brief <span aria-hidden="true">↗</span></button>
+      <button type="button" id="copy-quote" class="quote-copy">Copy brief</button>
+    </div>
+    <p class="quote-disclosure">This preview does not submit files or contact details to a server. Download or copy the brief to share it with the studio once its contact channel is configured.</p>
+    <p class="quote-feedback" id="quote-feedback" role="status" aria-live="polite"></p>
+  </form>
+</aside>
+
 <script type="module">
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const canvas = document.querySelector('#webgl');
 let scene, camera, renderer;
@@ -376,7 +546,6 @@ const sparkData = [];
 
 const sizes = { width: window.innerWidth, height: window.innerHeight };
 
-const ASSET_BASE_URL = "https://api.getlayers.ai/storage/v1/object/public/public/assets/laocoon-59f84455c6";
 
 function initScene() {
 
@@ -503,59 +672,88 @@ function createSparks() {
 }
 
 function loadModel() {
-    const loader = new GLTFLoader();
-    loader.load(
-        ASSET_BASE_URL + '/bronze_horse.glb',
-        (gltf) => {
-            gltfModel = gltf.scene;
+    // Generative lattice-inspired vessel: real triangulated mesh with visible
+    // microscopic layer striations. No model download or external 3D asset.
+    modelPivot = new THREE.Group();
+    scene.add(modelPivot);
+    gltfModel = new THREE.Group();
+    modelPivot.add(gltfModel);
 
-            modelPivot = new THREE.Group();
-            scene.add(modelPivot);
-            modelPivot.add(gltfModel);
+    const radial = 192, vertical = 270, height = 3.42;
+    const positions = [], indices = [];
+    function profile(t) {
+        const neck = 0.43 + 0.47 * Math.pow(Math.sin(Math.PI * t), 1.24);
+        const shoulder = 0.12 * Math.sin(t * Math.PI * 3.1 + .15);
+        return Math.max(.30, neck + shoulder);
+    }
+    for (let row = 0; row <= vertical; row++) {
+        const t = row / vertical;
+        const y = (t - .5) * height;
+        const base = profile(t);
+        for (let j = 0; j <= radial; j++) {
+            const a = j / radial * Math.PI * 2;
+            const flutes = 1 + .072 * Math.cos(a * 13 + t * Math.PI * 4.0);
+            const layerDetail = .003 * Math.sin(t * 1100);
+            const r = base * flutes + layerDetail;
+            positions.push(r * Math.cos(a), y, r * Math.sin(a));
+        }
+    }
+    for (let row=0;row<vertical;row++) {
+        for (let j=0;j<radial;j++) {
+            const i = row * (radial+1) + j;
+            indices.push(i,i+1,i+radial+1,i+1,i+radial+2,i+radial+1);
+        }
+    }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
+    geometry.setIndex(indices);
+    geometry.computeVertexNormals();
+    const bronze = new THREE.MeshStandardMaterial({
+        color:'#a76b46',metalness:.92,roughness:.42,side:THREE.DoubleSide
+    });
+    const vessel = new THREE.Mesh(geometry,bronze);
+    vessel.castShadow=true;vessel.receiveShadow=true;
+    gltfModel.add(vessel);
 
-            gltfModel.traverse((child) => {
-                if (child.isMesh) {
-                    child.castShadow = true;
-                    child.receiveShadow = true;
-                    if (child.material) {
-                        child.material.roughness = 0.42;   // semi-matte, noble highlights
-                        child.material.metalness = 0.92;   // high satin-bronze metallic sheen
-                        child.material.flatShading = false;
-                        if (child.material.map) {
-                            child.material.map.anisotropy = 16;
-                        }
-                    }
-                }
-            });
-
-            if (gltf.animations && gltf.animations.length > 0) {
-                mixer = new THREE.AnimationMixer(gltfModel);
-                gltf.animations.forEach((clip) => { mixer.clipAction(clip).play(); });
-            }
-
-            // 1. scale so max dimension = 3.5
-            const boxInitial = new THREE.Box3().setFromObject(gltfModel);
-            const sizeInitial = boxInitial.getSize(new THREE.Vector3());
-            const maxDim = Math.max(sizeInitial.x, sizeInitial.y, sizeInitial.z);
-            const targetScale = 3.5 / (maxDim > 0.0001 ? maxDim : 1);
-            gltfModel.scale.setScalar(targetScale);
-
-            // 2. update world matrix so the box accounts for scale
-            gltfModel.updateMatrixWorld(true);
-
-            // 3. exact geometric center of the scaled model
-            const boxScaled = new THREE.Box3().setFromObject(gltfModel);
-            const centerScaled = boxScaled.getCenter(new THREE.Vector3());
-
-            // 4. recenter model so its center sits at the pivot origin
-            gltfModel.position.sub(centerScaled);
-
-            // 5. lower the pivot for a grounded stance
-            modelPivot.position.y = -0.4;
-        },
-        undefined,
-        (error) => { console.error('Error loading bronze horse model:', error); }
+    const rimRadius = profile(1) * (1 + .035);
+    const rim = new THREE.Mesh(
+        new THREE.TorusGeometry(rimRadius,.035,12,144),
+        new THREE.MeshStandardMaterial({color:'#dfaf84',metalness:.92,roughness:.35})
     );
+    rim.rotation.x = Math.PI / 2;rim.position.y = height/2;
+    gltfModel.add(rim);
+
+    const hole = new THREE.Mesh(
+        new THREE.CircleGeometry(rimRadius - .04,96),
+        new THREE.MeshBasicMaterial({color:'#100806',side:THREE.DoubleSide})
+    );
+    hole.rotation.x = -Math.PI/2;hole.position.y = height/2-.03;
+    gltfModel.add(hole);
+
+    const baseRing = new THREE.Mesh(
+        new THREE.TorusGeometry(profile(0),.035,12,144),
+        new THREE.MeshStandardMaterial({color:'#6d432c',metalness:.7,roughness:.43})
+    );
+    baseRing.rotation.x=Math.PI/2;baseRing.position.y=-height/2;
+    gltfModel.add(baseRing);
+
+    // A subtle second layer of filaments catches the specular forge lights.
+    const lineMaterial = new THREE.LineBasicMaterial({
+        color:'#f0bf90',transparent:true,opacity:.15
+    });
+    for(let n=0;n<48;n++) {
+        const t=(n+.5)/48;
+        const r=profile(t);
+        const points=[];
+        for(let j=0;j<=128;j++) {
+            const a=j/128*Math.PI*2;
+            const rr=r*(1+.072*Math.cos(a*13+t*Math.PI*4));
+            points.push(new THREE.Vector3(rr*Math.cos(a)*1.002,(t-.5)*height,rr*Math.sin(a)*1.002));
+        }
+        const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),lineMaterial);
+        gltfModel.add(line);
+    }
+    modelPivot.position.y = -0.4;
 }
 
 function createBackgroundShader() {
@@ -865,20 +1063,20 @@ function updateSlides(scroll) {
 
     function isActive(val, start, end) { return val >= start && val <= end; }
 
-    if (slide1) slide1.classList.toggle('active', isActive(scroll, -0.10, 0.12));
+    if (slide1) slide1.classList.toggle('active', isActive(scroll, -0.10, 0.26));
     if (slide2) {
-        const active2 = isActive(scroll, 0.28, 0.40);
+        const active2 = isActive(scroll, 0.26, 0.52);
         slide2.classList.toggle('active', active2);
         const slide2Img = document.getElementById('slide-2-img');
         if (slide2Img) slide2Img.classList.toggle('active', active2);
     }
-    if (slide3) slide3.classList.toggle('active', isActive(scroll, 0.56, 0.68));
-    if (slide4) slide4.classList.toggle('active', isActive(scroll, 0.84, 1.05));
+    if (slide3) slide3.classList.toggle('active', isActive(scroll, 0.52, 0.78));
+    if (slide4) slide4.classList.toggle('active', isActive(scroll, 0.78, 1.05));
 }
 
 function setupNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
-    const targetScrolls = [0.0, 0.34, 0.62, 0.94];
+    const targetScrolls = [0.0, 0.28, 0.54, 0.80];
     navLinks.forEach((link, index) => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -896,7 +1094,127 @@ window.addEventListener('DOMContentLoaded', () => {
     updateSlides(0);
     animate();
     setupNavigation();
+    setupProjectBrief();
 });
+
+
+function setupProjectBrief() {
+    const panel=document.getElementById('quote-panel');
+    const scrim=document.getElementById('quote-scrim');
+    const close=document.getElementById('quote-close');
+    const form=document.getElementById('quote-form');
+    const feedback=document.getElementById('quote-feedback');
+    let priorFocus=null,closeTimeout=null;
+
+    function toggle(open){
+        if(closeTimeout)clearTimeout(closeTimeout);
+        if(open){
+            priorFocus=document.activeElement;
+            scrim.hidden=false;
+            panel.inert=false;
+            panel.setAttribute('aria-hidden','false');
+            document.body.classList.add('quote-open');
+            requestAnimationFrame(()=>{scrim.classList.add('open');panel.classList.add('open');close.focus()});
+        } else {
+            scrim.classList.remove('open');panel.classList.remove('open');
+            panel.setAttribute('aria-hidden','true');
+            panel.inert=true;
+            document.body.classList.remove('quote-open');
+            closeTimeout=setTimeout(()=>{scrim.hidden=true},420);
+            if(priorFocus?.focus)priorFocus.focus();
+        }
+    }
+    document.querySelectorAll('[data-open-quote]').forEach(b=>b.addEventListener('click',()=>toggle(true)));
+    close.addEventListener('click',()=>toggle(false));
+    scrim.addEventListener('click',()=>toggle(false));
+    window.addEventListener('keydown',e=>{
+        if(!panel.classList.contains('open'))return;
+        if(e.key==='Escape'){e.preventDefault();toggle(false)}
+        if(e.key==='Tab'){
+            const focusables=[...panel.querySelectorAll('button,input,select,textarea')].filter(el=>!el.disabled);
+            const first=focusables[0],last=focusables[focusables.length-1];
+            if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+            else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+        }
+    });
+
+    const rates={pla:1.65,petg:2.15,abs:2.6,tpu:3.5,resin:4.8};
+    const serviceFees={prototyping:125,functional:175,model:240,design:425};
+    const finishFees={standard:0,fine:95,premium:260};
+    const currency=new Intl.NumberFormat('en-ZA',{style:'currency',currency:'ZAR',maximumFractionDigits:0});
+    function calculate(){
+        const fd=new FormData(form);
+        const grams=Math.max(10,Math.min(500,Number(fd.get('grams'))||80));
+        const quantity=Math.max(1,Math.min(100,Math.floor(Number(fd.get('quantity'))||1)));
+        const rate=rates[fd.get('material')]||rates.pla;
+        const machineMin=fd.get('material')==='resin'?190:95;
+        const setup=serviceFees[fd.get('service')]||125;
+        const finish=finishFees[fd.get('finish')]||0;
+        const subtotal=setup+quantity*(machineMin+grams*rate+finish);
+        const total=Math.round(subtotal/10)*10;
+        document.getElementById('grams-output').textContent=grams+' g';
+        document.getElementById('quote-estimate').textContent=currency.format(total);
+        return {fd,grams,quantity,total};
+    }
+    function textBrief(){
+        const {fd,grams,quantity,total}=calculate();
+        const name=String(fd.get('clientName')||'').trim();
+        const email=String(fd.get('email')||'').trim();
+        const file=form.querySelector('#quote-file').files[0];
+        return [
+            'ALCHEMIST 3D / PROJECT ENQUIRY',
+            '---------------------------------',
+            'Name: '+name,
+            'Email: '+email,
+            'Project: '+form.querySelector('#quote-service').selectedOptions[0].text,
+            'Material: '+form.querySelector('#quote-material').selectedOptions[0].text,
+            'Estimated print weight: '+grams+' g',
+            'Quantity: '+quantity,
+            'Finish: '+form.querySelector('#quote-finish').selectedOptions[0].text,
+            'Reference file selected locally: '+(file?file.name:'None'),
+            'Notes: '+String(fd.get('notes')||'').trim(),
+            'Illustrative estimate: '+currency.format(total),
+            '',
+            'IMPORTANT: This file is a draft brief, not a submitted order.',
+            'Any model file must be shared separately.',
+            'Final quote depends on geometry, material use, print time, and finishing.'
+        ].join('\n');
+    }
+    form.addEventListener('input',()=>{calculate();feedback.textContent=''});
+    form.addEventListener('change',()=>{calculate();feedback.textContent=''});
+    document.getElementById('quote-file').addEventListener('change',e=>{
+        const file=e.target.files[0];
+        document.getElementById('file-label').textContent=file?'Selected: '+file.name:'+ Choose a model or drawing';
+    });
+    form.addEventListener('submit',e=>{
+        e.preventDefault();
+        if(!form.reportValidity())return;
+        const txt=textBrief(),blob=new Blob([txt],{type:'text/plain;charset=utf-8'});
+        const url=URL.createObjectURL(blob);
+        const a=document.createElement('a');a.href=url;a.download='alchemist-3d-project-brief.txt';a.click();
+        setTimeout(()=>URL.revokeObjectURL(url),1000);
+        feedback.textContent='Brief downloaded. Your file stays on your device; no request was sent.';
+    });
+    document.getElementById('copy-quote').addEventListener('click',async()=>{
+        if(!form.reportValidity())return;
+        const brief=textBrief();
+        try{
+            if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(brief);
+            else {
+                const t=document.createElement('textarea');t.value=brief;
+                document.body.appendChild(t);t.select();
+                const copied=document.execCommand('copy');t.remove();
+                if(!copied)throw new Error('Clipboard unavailable');
+            }
+            feedback.textContent='Project brief copied. No details were submitted.';
+        }catch(error){feedback.textContent='Clipboard not available. Use Download project brief instead.'}
+    });
+    document.getElementById('brand-top').addEventListener('click',e=>{
+        e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});
+    });
+    calculate();
+}
+
 </script>
 </body>
 </html>
