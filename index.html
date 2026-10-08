@@ -521,7 +521,7 @@ import * as THREE from 'three';
 
 const canvas = document.querySelector('#webgl');
 let scene, camera, renderer;
-let gltfModel;     // the statue
+let gltfModel;     // procedural printed showcase
 let modelPivot;    // pivot group for perfect center-rotation
 let mixer;
 const clock = new THREE.Clock();
@@ -701,7 +701,7 @@ function loadModel() {
     for (let row=0;row<vertical;row++) {
         for (let j=0;j<radial;j++) {
             const i = row * (radial+1) + j;
-            indices.push(i,i+1,i+radial+1,i+1,i+radial+2,i+radial+1);
+            indices.push(i,i+radial+1,i+1,i+1,i+radial+1,i+radial+2);
         }
     }
     const geometry = new THREE.BufferGeometry();
